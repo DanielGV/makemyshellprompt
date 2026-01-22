@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>makemyshellprompt | Premium Prompt Designer</title>
+  <meta name="description"
+    content="Design your perfect shell prompt (PS1) with an interactive, user-friendly tool. Live preview, drag-and-drop, and easy copy-paste." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Fira+Code:wght@400;500&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/index.css" />
+</head>
+
+<body>
+  <div id="app">
+    <h1>makemyshellprompt</h1>
+    <p class="subtitle">Craft your perfect terminal experience with ease.</p>
+
+    <!-- Section 1: Available Elements -->
+    <section id="available-section">
+      <h2><span>1</span> Available Components</h2>
+      <div class="pills-grid" id="pills-container">
+        <!-- Pills will be injected by JS -->
+      </div>
+    </section>
+
+    <!-- Section 2: Selected Elements -->
+    <section id="selected-section">
+      <h2><span>2</span> Your Prompt Structure</h2>
+      <div id="selected-list">
+        <!-- Selected items will be injected and made draggable -->
+      </div>
+    </section>
+
+    <!-- Section 3: Live Preview -->
+    <section id="preview-section">
+      <h2><span>3</span> Live Preview</h2>
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="dot-group">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <select id="preview-font-select" class="font-select">
+            <option value="'Fira Code', monospace">Fira Code</option>
+            <option value="'JetBrains Mono', monospace">JetBrains Mono</option>
+            <option value="'Roboto Mono', monospace">Roboto Mono</option>
+            <option value="'Ubuntu Mono', monospace">Ubuntu Mono</option>
+            <option value="monospace">System Monospace</option>
+          </select>
+        </div>
+        <div class="terminal-body"><span id="prompt-preview"></span><span class="cursor"></span></div>
+      </div>
+    </section>
+
+    <!-- Section 4: PS1 Output -->
+    <section id="output-section">
+      <h2><span>4</span> Export PS1</h2>
+      <div class="ps1-container">
+        <code id="ps1-output">PS1="..."</code>
+        <button id="copy-btn" class="copy-btn">Copy Config</button>
+      </div>
+    </section>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
