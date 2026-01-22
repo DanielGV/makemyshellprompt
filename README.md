@@ -37,6 +37,12 @@ To run the project locally, follow these steps:
 3. **Access the App**:
    Open [http://localhost:5173/](http://localhost:5173/) in your browser.
 
+4. **Build the App**:
+Run the build command to generate a production-ready `dist` folder:
+   ```bash
+   npm run build
+   ```
+
 ## ✨ Features
 
 - **20+ Components**: Username, hostname, path, git branch, exit codes, and more.
